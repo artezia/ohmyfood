@@ -1,0 +1,96 @@
+@media screen and (min-width:768px){
+    p{
+        font-size:18px;
+    }
+    h1 {
+        font-size:28px;
+    }
+    h2 {
+        font-size:24px;
+    }
+    .policelogo {
+        font-size:46px;
+    }
+    .container_villes {
+        height: 50px;
+        padding: 0px;
+    }
+    .container_reserver {
+        object-fit : cover;
+        background-image: url("../images/restaurants/restaurant-responsive.jpg");
+        height: 300px;
+        background-size: 120% 350px;
+        background-position: right;
+        border-radius: 0 0 25px 25px;
+    }
+    .titre_reserver {
+    color: $color-text3;
+    font-size: 34px;
+    }
+    .texte_reserver {
+    color: $color-text3;
+    font-size: 18px;
+    text-shadow: 2px 1px 1px $color-text1;
+    line-height: normal;
+    }
+    .container_reserver {
+        justify-content: flex-start;
+    }
+    .container_fonctionnement_list {
+        @include flexrow;
+        flex-wrap: wrap;
+    }
+    .btn_fonctionnement {
+        margin-right: 30px;
+        margin-left: 30px;
+        width: 300px;
+    }
+    .container_restaurants_list {
+        @include flexrow;
+        flex-wrap: wrap;
+            width: 100%;
+        }
+    .container_restaurants_list_overview {
+        width: 340px;
+        margin: 10px;
+    }
+    .photo_restaurant {
+        height: 400px;
+    
+    }
+    .footer {
+        @include flexrow;
+        justify-content: space-around;
+    }
+    .container_footer {
+        padding-left: 0px;
+    }
+    .policelogo_footer {
+        text-align: center;
+        font-size: 28px;
+    }
+    .menu_responsive {
+        width: 95%;
+    }
+}
+@media screen and (min-width:992px){   
+    .container_reserver {
+        object-fit : cover;
+        background-image: url("../images/restaurants/restaurant-responsive.jpg");
+        border-radius: 0 0 25px 25px;
+        background-size: 100% 450px;
+        height: 400px;
+    } 
+    .menu_responsive {
+    @include flexrow;
+    align-items: flex-start;
+    width: 95%;
+    }
+    .photo_restaurant {
+        height: 500px;
+    }
+    .container_restaurants_list_overview {
+        width: 550px;
+        margin: 20px;
+    }
+}

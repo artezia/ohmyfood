@@ -1,0 +1,106 @@
+.position-icones {
+    position: relative;
+}
+.iconehover1 {
+    color: $color-text1;
+    position: absolute;
+    right: 0; bottom: 0;
+    z-index: 2;
+    line-height: 26px;
+}
+.iconehover2 {
+    background: -webkit-linear-gradient($color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    right: 0px; bottom: 0;
+    z-index: 3;
+    opacity: 0;
+    line-height: 26px;
+    transform: scale(1);
+    transition: 200ms ease-in-out;
+}
+.iconehover2:hover {
+    opacity: 1;
+    transform: scale(1.3);
+}
+.iconehover1_menu {
+    color: $color-text1;
+    position: absolute;
+    right: 0; bottom: 0;
+    z-index: 1;
+    line-height: 26px;
+}
+.btn_menu:hover .btn_menu_hover {
+    width: 20%;
+    transform: scaleX(0);
+    animation-name: buttonGrow;
+    animation-duration: 600ms;
+    transform-origin: right;
+    animation-fill-mode: forwards;
+}
+    @keyframes buttonGrow {
+        0% {
+            transform: scaleX(0);
+        }
+        100% {
+            transform: scaleX(1);
+        }
+    }
+.btn_menu:hover .btn_menu_tarif {
+    text-align: center;
+    width: 20%;
+}
+.btn_menu:hover .btn_menu_intitule {
+    margin-right: 0px; 
+}
+.btn_menu:hover .btn_menu_hover {
+    display: inline;
+    @include flexrow;
+}
+.btn_menu:hover .btn_validation {
+    animation : rotation 600ms ease-out forwards;
+    @keyframes rotation{
+        0% {transform: rotate(-1turn)
+        }
+        100%{transform: rotate(0deg)
+        }
+    }
+}
+.btn_menu {
+    width: 94%;
+    &:hover {cursor: pointer;}
+}
+.btn_menu_tarif {
+    width: 40%;
+    @include flexrow;
+}
+.btn_menu_hover {
+    display: none;
+}
+.paragraphe_menu {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.btn_menu_intitule {
+    width: 60%;
+}
+.btn_menu {
+    opacity: 0;
+    animation: introMenu 4s forwards;
+    @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+        animation-delay: 1000ms * $i;
+        }
+    }
+}
+@keyframes introMenu {
+    0% {
+    transform: translateY(30%);
+    }
+    100% {
+    transform: translateY(0%);
+    opacity: 1;
+    }
+}

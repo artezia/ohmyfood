@@ -1,0 +1,48 @@
+.btn {
+    @include ombre_bouton;
+    width: 260px;
+    height: 15px;
+    border-radius: 25px;
+    padding : 15px;
+    margin-bottom: 30px;
+    background: $background-gradient;
+    color: #FFFFFF;
+    &:hover{
+        background: $background-gradient2;
+    }
+}
+.btn_fonctionnement {
+    @include flexrow;
+    @include ombre_bouton;
+    justify-content:flex-start;
+    background: $color-background;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    width: 280px;
+    height: 70px;
+        &:hover{
+        background-color: lighten($color-primary, 35%);
+    }
+}
+.btn_fonctionnement:hover .fonctionnement_icone {
+    color: $color-primary;
+}
+.fonctionnement_chiffre {
+    background: $color-primary;
+    color: $color-text3;
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    padding: 4px;
+    margin-right: 15px;
+    @include flexcolumn;
+    position: relative;
+    right: 15px;
+}
+.fonctionnement_icone {
+    color: $color-text2;
+    padding-right: 20px;
+    &:hover {
+        color: $color-primary;
+    }
+}
